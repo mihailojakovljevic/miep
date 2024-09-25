@@ -6,3 +6,10 @@
 docker build -t miep-it66-2019
 4. Run the Docker container:
 docker run -v /content/data:/data miep-it66-2019
+
+Example:
+
+1. Pull the Docker image from Docker Hub:
+	docker pull your-docker-image
+2. Mount the model directory and run the container:
+	docker run -v /content/models:/app/models miep-it66-2019

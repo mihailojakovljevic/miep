@@ -1,16 +1,10 @@
 FROM python:3.10
 
-# Set working directory in container
+# Set the working directory
 WORKDIR /app
-
-RUN mkdir -p /model
-
-# Copy the requirements file and install dependencies
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy your code to the container
 COPY . .
 
-# Optional: Set default command to open the script
-CMD ["python", "inference.py"]
+# Optional: Set default command to open the script (but in Colab you run it manually)
+CMD ["python", "mias.ipynb"]
